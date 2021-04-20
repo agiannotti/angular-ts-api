@@ -4,11 +4,12 @@
     <h2 class="body"></h2>
     <p>
       <like
-        [isLiked]="tweet.isLiked"
+        [isActive]="tweet.isLiked"
         [likesCount]="tweet.likesCount"
-        (click)="onLikeChange(tweet.isLiked)"
+        (click)="onLikeChange($event)"
       >
       </like>
     </p>
   </div>
 </bootstrap-panel>
+<!-- use $event object for event handlers!! -->

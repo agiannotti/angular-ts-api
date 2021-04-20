@@ -10,12 +10,12 @@ export class AppComponent {
   // bind input properties
   tweet = {
     body: 'Here is the body of a tweet...',
-    isLiked: false,
-    likesCount: 0,
+    isLiked: true,
+    likesCount: 10,
   };
   // bind output properties
   // pass event data(isLiked) to app component below
-  onLikeChange(isLiked) {
-    console.log('Liked!', isLiked);
+  onLikeChange(eventArgs) {
+    console.log('changed!', eventArgs);
   }
 }

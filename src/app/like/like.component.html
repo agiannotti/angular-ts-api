@@ -1,9 +1,11 @@
 <span>
   <img
+    (click)="onClick()"
     [src]="
       isActive === true
-        ? '../../assets/svg/app.svg'
-        : '../../assets/svg/indicator.svg'
+        ? '../../assets/svg/indicator.svg'
+        : '../../assets/svg/app.svg'
     "
   />
 </span>
+<span>{{ likesCount }}</span>
