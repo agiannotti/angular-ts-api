@@ -1,13 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css'],
-  inputs: ['isFavorite'],
 })
 export class FavoriteComponent implements OnInit {
-  @Input() isFavorite: boolean;
+  // set alias for component selector to maintain desired case sensitivity
+  // alias can keep exclusivity for reference class name
+  @Input('isFavorite') isFavorite: boolean;
+  @Output() change = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +18,6 @@ export class FavoriteComponent implements OnInit {
   onClick(isFavorite) {
     this.isFavorite = !this.isFavorite;
     console.log('toggled!', isFavorite);
+    this.change.emit();
   }
 }
