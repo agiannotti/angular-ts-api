@@ -15,9 +15,8 @@ export class FavoriteComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onClick(isFavorite) {
+  onClick() {
     this.isFavorite = !this.isFavorite;
-    console.log('toggled!', isFavorite);
     this.change.emit();
   }
 }
