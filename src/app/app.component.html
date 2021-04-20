@@ -6,8 +6,9 @@
       <like
         [isLiked]="tweet.isLiked"
         [likesCount]="tweet.likesCount"
-        (like)="onLike()"
-      ></like>
+        (click)="onLikeChange(tweet.isLiked)"
+      >
+      </like>
     </p>
   </div>
 </bootstrap-panel>

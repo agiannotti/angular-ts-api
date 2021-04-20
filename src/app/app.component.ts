@@ -14,7 +14,8 @@ export class AppComponent {
     likesCount: 0,
   };
   // bind output properties
-  onLike() {
-    console.log('Liked!');
+  // pass event data(isLiked) to app component below
+  onLikeChange(isLiked) {
+    console.log('Liked!', isLiked);
   }
 }

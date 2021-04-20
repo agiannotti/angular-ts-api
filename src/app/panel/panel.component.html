@@ -1,0 +1,13 @@
+<!--  use ng content to bind instead of property binding-->
+<!--  this structure allows reuseable componentry -->
+<!--  this way we can allow consumer to provide custom content to consumer -->
+<!--  aka create and render with something resuable outside of a div or container  -->
+
+<div class="card card-default">
+  <div class="card-header">
+    <!-- using *** ng content *** to inject content -->
+    <ng-content select=".header"></ng-content>
+  </div>
+  <div class="card-body"></div>
+  <ng-content select=".body"></ng-content>
+</div>
