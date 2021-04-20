@@ -8,4 +8,5 @@
 <!-- input properties are used to pass input or state to a component -->
 <!-- output properties are used to raise events with custom components -->
 
-<favorite (change)="onFavoriteChanged()"></favorite>
+<!-- when handling change /click  event, use $event aka dom event object -->
+<favorite (change)="onFavoriteChanged($event)"></favorite>
