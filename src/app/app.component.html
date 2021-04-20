@@ -1,7 +1,13 @@
 <bootstrap-panel>
   <div class="header">Header</div>
   <div class="body">
-    <h2 class="body">Body</h2>
-    <p>Some content here...</p>
+    <h2 class="body"></h2>
+    <p>
+      <like
+        [isLiked]="tweet.isLiked"
+        [likesCount]="tweet.likesCount"
+        (like)="onLike()"
+      ></like>
+    </p>
   </div>
 </bootstrap-panel>

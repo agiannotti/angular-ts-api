@@ -1,4 +1,3 @@
-import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 import { Component } from '@angular/core';
 // applying interface for passing custom event object data from our event
 
@@ -8,12 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  post = {
-    title: 'title',
-    isFavorite: false,
+  // bind input properties
+  tweet = {
+    body: 'Here is the body of a tweet...',
+    isLiked: false,
+    likesCount: 0,
   };
-
-  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
-    console.log('Favorite changed', eventArgs);
+  // bind output properties
+  onLike() {
+    console.log('Liked!');
   }
 }
