@@ -4,6 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css'],
+  inputs: ['isFavorite'],
 })
 export class FavoriteComponent implements OnInit {
   @Input() isFavorite: boolean;
@@ -12,7 +13,8 @@ export class FavoriteComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onClick(iFavorite) {
+  onClick(isFavorite) {
     this.isFavorite = !this.isFavorite;
+    console.log('toggled!', isFavorite);
   }
 }
