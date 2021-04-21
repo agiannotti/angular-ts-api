@@ -1,15 +1,19 @@
 <bootstrap-panel>
-  <div class="header">Header</div>
-  <div class="body">
-    <h2 class="body"></h2>
-    <p>
-      <like
-        [isActive]="tweet.isLiked"
-        [likesCount]="tweet.likesCount"
-        (click)="onLikeChange($event)"
-      >
-      </like>
-    </p>
-  </div>
+  <cart title="Shipping Details">Shipping Details Content</cart>
+  <cart title="Billing Details"> Billing Details Content</cart>
 </bootstrap-panel>
-<!-- use $event object for event handlers!! -->
+
+<!-- 
+  use $event object for event handlers!! 
+-->
+
+<!-- 
+
+  <like
+    [isActive]="tweet.isLiked"
+    [likesCount]="tweet.likesCount"
+    (click)="onLikeChange($event)"
+    >
+  </like> 
+
+-->
