@@ -1,6 +1,15 @@
 <div class="zippy">
   <div class="zippy-heading" [class.expanded]="isExpanded" (click)="toggle()">
     {{ title }}
+    <span
+      ><img
+        class="__chevs"
+        [src]="
+          isExpanded
+            ? '../../assets/svg/chev-up.svg'
+            : '../../assets/svg/chev-down.svg'
+        "
+    /></span>
   </div>
   <div *ngIf="isExpanded" class="zippy-body">
     <ng-content></ng-content>

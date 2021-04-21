@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
+import { library, icon } from '@fortawesome/fontawesome-svg-core';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+
 // applying interface for passing custom event object data from our event
+library.add(faCamera);
+
+const camera = icon({ prefix: 'fas', iconName: 'camera' });
 
 @Component({
   selector: 'app-root',
@@ -8,6 +14,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // bind input properties
+
   tweet = {
     body: 'Here is the body of a tweet...',
     isLiked: true,

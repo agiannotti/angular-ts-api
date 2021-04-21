@@ -16,3 +16,7 @@
 .expanded {
   background: #f0f0f0;
 }
+
+.__chevs {
+  float: right;
+}
