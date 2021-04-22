@@ -8,6 +8,7 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, NgModelGroup, ReactiveFormsModule } from '@angular/forms';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule, NgModelGroup, ReactiveFormsModule } from '@angular/forms';
     LikeComponent,
     ZippyComponent,
     ContactComponent,
+    NewCourseFormComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule, FormsModule, ReactiveFormsModule],
   providers: [],
