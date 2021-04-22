@@ -7,10 +7,17 @@ import { LikeComponent } from './like/like.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, PanelComponent, LikeComponent, ZippyComponent, ContactComponent],
-  imports: [BrowserModule, FontAwesomeModule],
+  declarations: [
+    AppComponent,
+    PanelComponent,
+    LikeComponent,
+    ZippyComponent,
+    ContactComponent,
+  ],
+  imports: [BrowserModule, FontAwesomeModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
