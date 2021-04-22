@@ -57,12 +57,21 @@
       class="form-control"
     >
       <option value=""></option>
-      <option *ngFor="let method of contactMethods" [ngValue]="method.id">
+      <option *ngFor="let method of contactMethods" [value]="method.id">
         {{ method.name }}
       </option>
     </select>
   </div>
+
+  <!-- ngFor to generate all available contact methods into form radio buttons  -->
+  <div *ngFor="let method of contactMethods" class="radio">
+    <label>
+      <input ngModel type="radio" name="contactMethod" [value]="method.id" />
+      {{ method.name }}
+    </label>
+  </div>
   <!-- provides value in json format with string interpolation! great for seeing form data -->
+
   <p>{{ f.value | json }}</p>
   <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
